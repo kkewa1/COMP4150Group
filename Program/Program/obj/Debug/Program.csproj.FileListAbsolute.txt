@@ -1,0 +1,5 @@
+C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\Program.csproj.AssemblyReference.cache
+C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\MainWindow.g.cs
+C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\App.g.cs
+C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\Program_MarkupCompile.cache
+C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\Program_MarkupCompile.lref
