@@ -6,9 +6,54 @@
              xmlns:local="clr-namespace:Program.Views"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FFCE2E26">
-        <Ellipse HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black"/>
-        <Ellipse HorizontalAlignment="Left" Height="50" Margin="750,400,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black"/>
+    <Grid Background="#FFEEEEEE" Margin="10">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- Item Analytics -->
+        <ListView Grid.Column="0" ItemsSource="{Binding ItemAnalytics}" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding ItemID, StringFormat=Item ID: {0}}" FontWeight="Bold"/>
+                        <TextBlock>
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="Year: {0}, Month: {1}">
+                                    <Binding Path="Year"/>
+                                    <Binding Path="Month"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Text="{Binding Revenue, StringFormat=Revenue: {0:C}}"/>
+                        <TextBlock Text="{Binding TimesOrdered, StringFormat=Times Ordered: {0}}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+        <!-- Table Analytics -->
+        <ListView Grid.Column="1" ItemsSource="{Binding TableAnalytics}" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding TableID, StringFormat=Table ID: {0}}" FontWeight="Bold"/>
+                            <TextBlock>
+                                <TextBlock.Text>
+                                    <MultiBinding StringFormat="Year: {0}, Month: {1}">
+                                        <Binding Path="Year"/>
+                                        <Binding Path="Month"/>
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                            <TextBlock Text="{Binding Revenue, StringFormat=Revenue: {0:C}}"/>
+                            <TextBlock Text="{Binding TimesUsed, StringFormat=Times Used: {0}}"/>
+                        </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
 
     </Grid>
 </UserControl>

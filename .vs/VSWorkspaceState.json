@@ -1,10 +1,7 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Program",
-    "\\Program\\db",
-    "\\Program\\db\\scripts",
-    "\\Program\\Program"
+    "\\Program"
   ],
   "SelectedNode": "\\Program\\Program.sln",
   "PreviewInSolutionExplorer": false

@@ -98,7 +98,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DBAAnalytics.cs" />
+    <Compile Include="ItemAnalyticsData.cs" />
+    <Compile Include="ItemData.cs" />
+    <Compile Include="DBAItem.cs" />
     <Compile Include="DBALogin.cs" />
+    <Compile Include="TableAnalyticsData.cs" />
     <Compile Include="UserData.cs" />
     <Compile Include="ViewModels\AdminViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

@@ -7,8 +7,16 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FF0084FF">
-        <Ellipse HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black"/>
-        <Ellipse HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black" Margin="750,400,0,0"/>
-
+        <ListView ItemsSource="{Binding DataItems}" Margin="10">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock Text="{Binding Name}" FontSize="18" Foreground="#333333" FontWeight="Bold"/>
+                        <TextBlock Text="{Binding Description}" Foreground="#555555" TextWrapping="Wrap"/>
+                        <TextBlock Text="{Binding Price, StringFormat=C}" Foreground="#006600" FontWeight="Bold"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </UserControl>
