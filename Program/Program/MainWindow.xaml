@@ -4,9 +4,44 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Program"
+        xmlns:viewmodels="clr-namespace:Program.ViewModels"
+        xmlns:views="clr-namespace:Program.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800"
+        Loaded="OnLoad">
+    <Window.Resources>
+        <DataTemplate x:Name="mainViewTemplate" DataType="{x:Type viewmodels:MainViewModel}">
+            <views:MainView DataContext="{Binding}"></views:MainView>
+        </DataTemplate>
+        <DataTemplate x:Name="adminViewTemplate" DataType="{x:Type viewmodels:AdminViewModel}">
+            <views:AdminView DataContext="{Binding}"></views:AdminView>
+        </DataTemplate>
+    </Window.Resources>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <DockPanel Grid.Row="0" Grid.Column="0" Grid.RowSpan="5">
+            <StackPanel Background="#FF5F5F5F">
+                <Button x:Name="HomeButton" Content="Home" Click="HomeButton_Clicked" Padding="1,10,1,10"/>
+                <Button x:Name="AdminButton" Content="Admin" Click="AdminButton_Clicked" Padding="1,10,1,10"/>
+            </StackPanel>
+        </DockPanel>
+
+        <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
+
+        <Button x:Name="LoginButton" Grid.Row="4" Grid.Column="0" Content="Login" VerticalAlignment="Bottom" Padding="1,10,1,10" Click="LoginButton_Clicked"/>
     </Grid>
 </Window>

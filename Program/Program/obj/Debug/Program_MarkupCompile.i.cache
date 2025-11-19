@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\obj\Debug\
+C:\Users\kaisa\Source\Repos\COMP4150Group2\Program\Program\obj\Debug\
 Program
 none
 false
 DEBUG;TRACE
-C:\Users\blade\Source\Repos\COMP4150Project\Program\Program\App.xaml
-1219584333
+C:\Users\kaisa\Source\Repos\COMP4150Group2\Program\Program\App.xaml
+4906376644
 
-6-502434485
-13-1310406943
-MainWindow.xaml;
+132032300287
+24886354616
+MainWindow.xaml;Views\AdminView.xaml;Views\MainView.xaml;LoginDialog.xaml;
 
-False
+True
 

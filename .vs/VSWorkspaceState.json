@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Program",
+    "\\Program\\db",
+    "\\Program\\db\\scripts",
+    "\\Program\\Program"
   ],
-  "SelectedNode": "\\C:\\Users\\kaisa\\Source\\Repos\\COMP4150Group2",
+  "SelectedNode": "\\Program\\Program.sln",
   "PreviewInSolutionExplorer": false
 }

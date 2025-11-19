@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Program.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,53 @@ namespace Program
     /// </summary>
     public partial class MainWindow : Window
     {
+        UserData userData;
+
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        void OnLoad(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MainViewModel();
+            userData = new UserData();
+        }
+
+        private void HomeButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            DataContext = new MainViewModel();
+        }
+
+        private void AdminButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            if (userData.ID > 0)
+            {
+                DataContext = new AdminViewModel();
+            } else
+            {
+                MessageBox.Show("You cannot access the admin view.\nPlease try logging in.");
+            }
+        }
+
+        private void LoginButton_Clicked(object sender, RoutedEventArgs e)
+        {
+            LoginDialog dlg = new LoginDialog();
+            dlg.Owner = this;
+            dlg.ShowDialog();
+            if (dlg.DialogResult == true)
+            {
+                DBALogin dbLogin = new DBALogin();
+                userData = dbLogin.Login(dlg.username.Text, dlg.password.Text);
+                if (userData.ID > 0)
+                {
+                    LoginButton.Visibility = Visibility.Collapsed;
+                    MessageBox.Show("You are logged in as StaffID " + userData.ID + ".");
+                }else
+                {
+                    MessageBox.Show("Your login was unsuccessful.");
+                }
+            }
         }
     }
 }
