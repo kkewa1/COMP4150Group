@@ -7,8 +7,8 @@
         xmlns:viewmodels="clr-namespace:Program.ViewModels"
         xmlns:views="clr-namespace:Program.Views"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
-        Loaded="OnLoad">
+        Title="MainWindow" Height="492" Width="1020"
+        Loaded="OnLoad" ResizeMode="NoResize">
     <Window.Resources>
         <DataTemplate x:Name="mainViewTemplate" DataType="{x:Type viewmodels:MainViewModel}">
             <views:MainView DataContext="{Binding}"></views:MainView>

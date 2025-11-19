@@ -7,6 +7,8 @@
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFCE2E26">
-            
+        <Ellipse HorizontalAlignment="Left" Height="50" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black"/>
+        <Ellipse HorizontalAlignment="Left" Height="50" Margin="750,400,0,0" Stroke="Black" VerticalAlignment="Top" Width="50" Fill="Black"/>
+
     </Grid>
 </UserControl>
