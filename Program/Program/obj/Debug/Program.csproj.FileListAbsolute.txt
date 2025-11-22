@@ -85,3 +85,5 @@ C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Progr
 C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Program.csproj.Up2Date
 C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Program.exe
 C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Program.pdb
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Views\QuantityPrompt.g.cs
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Views\QuantityPrompt.baml

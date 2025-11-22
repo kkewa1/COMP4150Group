@@ -1,5 +1,6 @@
-﻿using System.Windows.Controls;
-using Program.ViewModels;
+﻿using Program.ViewModels;
+using System.Windows;
+using System.Windows.Controls;
 
 
 namespace Program.Views

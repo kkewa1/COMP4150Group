@@ -1,0 +1,24 @@
+﻿<Window x:Class="Program.Views.QuantityPrompt"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Program.Views"
+        mc:Ignorable="d"
+        Title="QuantityPrompt" Height="200" Width="300">
+    <Grid Margin="10">
+        <StackPanel>
+            <TextBlock Text="Enter Quantity:" 
+                       Margin="0 0 0 8"
+                       FontWeight="Bold"/>
+
+            <TextBox x:Name="quantityBox" Text="1" 
+                     FontSize="16" Height="35"/>
+
+            <Button Content="Confirm"
+                    Height="35"
+                    Margin="0 10 0 0"
+                    Click="Confirm_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
