@@ -43,5 +43,7 @@
         <ContentControl Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="4" Grid.RowSpan="5" Content="{Binding}"/>
 
         <Button x:Name="LoginButton" Grid.Row="4" Grid.Column="0" Content="Login" VerticalAlignment="Bottom" Padding="1,10,1,10" Click="LoginButton_Clicked"/>
+
+        <Button Content="Manage Orders" Click="ManageOrders_Click" />
     </Grid>
 </Window>

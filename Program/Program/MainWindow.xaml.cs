@@ -69,5 +69,9 @@ namespace Program
                 }
             }
         }
+        private void ManageOrders_Click(object sender, RoutedEventArgs e)
+        {
+            Content = new Program.Views.OrderStatusView();
+        }
     }
 }

@@ -122,6 +122,9 @@
     <Compile Include="Views\QuantityPrompt.xaml.cs">
       <DependentUpon>QuantityPrompt.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\OrderStatusView.xaml.cs">
+      <DependentUpon>OrderStatusView.xaml</DependentUpon>
+    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\QuantityPrompt.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\OrderStatusView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

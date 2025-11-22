@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="Program.Views.OrderStatusView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             x:Name="Root"
+             >
+    <Grid Margin="12">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,8">
+            <Button Content="Refresh" Click="BtnRefresh_Click"/>
+            <TextBlock Text="  Select an order, edit statuses, then Save." VerticalAlignment="Center"/>
+        </StackPanel>
+
+        <DataGrid x:Name="GridOrders" Grid.Row="1" AutoGenerateColumns="False" IsReadOnly="False" SelectionMode="Single">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="OrderID" Binding="{Binding OrderID}" IsReadOnly="True" Width="80"/>
+                <DataGridTextColumn Header="Table"   Binding="{Binding TableID}" IsReadOnly="True" Width="60"/>
+                <DataGridTextColumn Header="Staff"   Binding="{Binding StaffID}" IsReadOnly="True" Width="60"/>
+
+                <DataGridTemplateColumn Header="Order Status" Width="160">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding OrderStatus}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding ElementName=Root, Path=OrderStatuses}"
+                        SelectedItem="{Binding OrderStatus, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+
+                <!-- Payment Status -->
+                <DataGridTemplateColumn Header="Payment Status" Width="160">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding PaymentStatus}"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                    <DataGridTemplateColumn.CellEditingTemplate>
+                        <DataTemplate>
+                            <ComboBox ItemsSource="{Binding ElementName=Root, Path=PaymentStatuses}"
+                        SelectedItem="{Binding PaymentStatus, Mode=TwoWay}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellEditingTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,8,0,0">
+            <Button Content="Save Selected" Click="BtnSave_Click" Margin="0,0,8,0"/>
+            <Button Content="Mark Ready" Click="BtnReady_Click"/>
+        </StackPanel>
+        
+    </Grid>
+</UserControl>
