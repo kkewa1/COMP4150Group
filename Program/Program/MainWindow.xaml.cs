@@ -50,6 +50,18 @@ namespace Program
             }
         }
 
+        private void ManageOrders_Click(object sender, RoutedEventArgs e)
+        {
+            if (userData.ID > 0)
+            {
+                DataContext = new OrderStatusViewModel();
+            }
+            else
+            {
+                MessageBox.Show("You cannot access the orders view.\nPlease try logging in.");
+            }
+        }
+
         private void LoginButton_Clicked(object sender, RoutedEventArgs e)
         {
             LoginDialog dlg = new LoginDialog();
@@ -68,10 +80,6 @@ namespace Program
                     MessageBox.Show("Your login was unsuccessful.");
                 }
             }
-        }
-        private void ManageOrders_Click(object sender, RoutedEventArgs e)
-        {
-            Content = new Program.Views.OrderStatusView();
         }
     }
 }

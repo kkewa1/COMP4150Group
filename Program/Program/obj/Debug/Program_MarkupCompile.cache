@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\obj\Debug\
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\
 Program
 none
 false
 DEBUG;TRACE
-C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\App.xaml
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\App.xaml
 61784840606
 
-22-1706188085
-24-1130146696
+23-1952941766
+24-1390450572
 MainWindow.xaml;Views\AdminView.xaml;Views\MainView.xaml;LoginDialog.xaml;Views\QuantityPrompt.xaml;Views\OrderStatusView.xaml;
 
 False

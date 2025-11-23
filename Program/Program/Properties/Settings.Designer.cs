@@ -26,8 +26,9 @@ namespace Program.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\COMP4150Datab" +
-            "ase.mdf;Integrated Security=True;Connect Timeout=30;Encrypt=False")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\blade\\source\\repos\\C" +
+            "OMP4150Project\\Program\\Program\\COMP4150Database.mdf;Integrated Security=True;Con" +
+            "nect Timeout=30;Encrypt=False")]
         public string COMP4150DatabaseConnectionString {
             get {
                 return ((string)(this["COMP4150DatabaseConnectionString"]));

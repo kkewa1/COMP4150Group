@@ -16,6 +16,9 @@
         <DataTemplate x:Name="adminViewTemplate" DataType="{x:Type viewmodels:AdminViewModel}">
             <views:AdminView DataContext="{Binding}"></views:AdminView>
         </DataTemplate>
+        <DataTemplate x:Name="orderViewTemplate" DataType="{x:Type viewmodels:OrderStatusViewModel}">
+            <views:OrderStatusView DataContext="{Binding}"></views:OrderStatusView>
+        </DataTemplate>
     </Window.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -37,6 +40,7 @@
             <StackPanel Background="#FF5F5F5F">
                 <Button x:Name="HomeButton" Content="Home" Click="HomeButton_Clicked" Padding="1,10,1,10"/>
                 <Button x:Name="AdminButton" Content="Admin" Click="AdminButton_Clicked" Padding="1,10,1,10"/>
+                <Button Content="Manage Orders" Click="ManageOrders_Click" Padding="1,10,1,10"/>
             </StackPanel>
         </DockPanel>
 
@@ -44,6 +48,6 @@
 
         <Button x:Name="LoginButton" Grid.Row="4" Grid.Column="0" Content="Login" VerticalAlignment="Bottom" Padding="1,10,1,10" Click="LoginButton_Clicked"/>
 
-        <Button Content="Manage Orders" Click="ManageOrders_Click" />
+        
     </Grid>
 </Window>

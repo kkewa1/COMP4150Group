@@ -131,3 +131,5 @@ C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\obj\Debug\Program.exe
 C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\obj\Debug\Program.pdb
 C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\obj\Debug\Views\OrderStatusView.baml
 C:\Users\Haoya\source\repos\COMP4150Group\Program\Program\obj\Debug\Views\OrderStatusView.g.cs
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Views\OrderStatusView.baml
+C:\Users\blade\source\repos\kkewa1\COMP4150Group\Program\Program\obj\Debug\Views\OrderStatusView.g.cs
